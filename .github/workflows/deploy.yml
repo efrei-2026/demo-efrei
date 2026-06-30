@@ -37,6 +37,7 @@ jobs:
             -Dsonar.organization=efrei-2026
 
       - name: Publish to Nexus
+        continue-on-error: true
         if: github.ref == 'refs/heads/main'
         run: mvn deploy -DskipTests
         env:
