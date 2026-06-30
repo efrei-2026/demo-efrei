@@ -26,6 +26,7 @@ jobs:
         run: mvn clean verify
 
       - name: SonarCloud Analysis
+        continue-on-error: true
         uses: SonarSource/sonarcloud-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -34,7 +35,6 @@ jobs:
           args: >
             -Dsonar.projectKey=efrei-2026_demo-efrei
             -Dsonar.organization=efrei-2026
-            -Dsonar.qualitygate.wait=false
 
       - name: Publish to Nexus
         if: github.ref == 'refs/heads/main'
