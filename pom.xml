@@ -56,4 +56,11 @@
 		</plugins>
 	</build>
 
+      <distributionManagement>
+       <repository>
+          <id>nexus</id>
+          <url>http://host.docker.internal:8081/repository/spring-releases/</url>
+      </repository>
+    </distributionManagement>
+
 </project>
