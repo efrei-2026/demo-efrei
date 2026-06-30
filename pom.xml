@@ -65,9 +65,9 @@
          </plugins>
         </build>
         <distributionManagement>
-                <repository>
-                        <id>nexus</id>
-                        <url>http://host.docker.internal:8081/repository/spring-releases/</url>
-                </repository>
-        </distributionManagement>
+            <repository>
+               <id>github</id>
+               <url>https://maven.pkg.github.com/efrei-2026/demo-efrei</url>
+            </repository>
+       </distributionManagement>
 </project>
