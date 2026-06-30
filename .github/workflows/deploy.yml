@@ -28,7 +28,7 @@ jobs:
       - name: SonarQube Analysis
         run: |
           mvn sonar:sonar \
-          -Dsonar.projectKey=efrei-2026 \
+          -Dsonar.projectKey=efrei-2026_demo-efrei \
           -Dsonar.organization=efrei-2026 \
           -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }} \
           -Dsonar.login=${{ secrets.SONAR_TOKEN }}
