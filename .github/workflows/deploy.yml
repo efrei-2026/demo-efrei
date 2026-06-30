@@ -28,7 +28,8 @@ jobs:
       - name: SonarQube Analysis
         run: |
           mvn sonar:sonar \
-          -Dsonar.projectKey=springboot-app \
+          -Dsonar.projectKey=efrei-2026 \
+          -Dsonar.organization=efrei-2026 \
           -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }} \
           -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
