@@ -26,7 +26,7 @@ jobs:
           cache: maven
 
       - name: Build with Maven
-        run: mvn clean verify
+        run: mvn clean verify jacoco:report
 
       - name: SonarCloud Analysis
         continue-on-error: true
